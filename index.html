@@ -43,7 +43,8 @@
             <p class="lead">A One-day Conference About All Things JavaScript</p>
 
         <div class="btn-group mt-2" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary btn-lg">Register Now</button>
+            <button type="button" class="btn btn-primary btn-lg"
+                    data-toggle="modal" data-target="#register">Register Now</button>
             <a class="btn btn-secondary btn-lg" href="#speakers">See Speakers</a>
         </div>
 
@@ -74,14 +75,14 @@
         </div>
         <div class="col-md-4 col-xl-3">
             <h3 class="mb-2">What You'll Learn</h3>
-            <ul>
-                <li><strong>MongoDB</strong>: NoSQL database</li>
-                <li><strong>Angular</strong>: JavaScript framework</li>
-                <li><strong>Express</strong>: Framework for Node</li>
-                <li><strong>Node.js</strong>: JavaScript environment</li>
-                <li><strong>ES2015</strong>: Latest version of JavaScript</li>
-                <li><strong>Babel</strong>: JavaScript compiler</li>
-            </ul>
+            <div class="list-group">
+                <a href="#" class="list-group-item"><strong>MongoDB</strong>: NoSQL database</a>
+                <a href="#" class="list-group-item"><strong>Angular</strong>: JavaScript framework</a>
+                <a href="#" class="list-group-item"><strong>Express</strong>: Framework for Node</a>
+                <a href="#" class="list-group-item"><strong>Node.js</strong>: JavaScript environment</a>
+                <a href="#" class="list-group-item"><strong>ES2015</strong>: Latest version of JavaScript</a>
+                <a href="#" class="list-group-item"><strong>Babel</strong>: JavaScript compiler</a>
+            </div>
         </div>
     </div> <!-- /.about -->
 
@@ -163,11 +164,38 @@
 
     <!-- schedule -->
     <h1 class="display-4 text-sm-center my-3 text-muted">Schedule</h1>
-    [Conference schedule goes here]
+    <ul class="list-group">
+        <li class="list-group-item justify-content-between">
+            <h4 class="list-group-item-heading">Keynote: Internet of Things
+                <span class="badge badge-info badge-pill pull-xs-right">9:00am</span>
+            </h4>
+            NodeStradamus
+        </li>
+        <li class="list-group-item justify-content-between">
+            <h4 class="list-group-item-heading">Angular Basics
+                <span class="badge badge-info badge-pill pull-xs-right">10:00am</span>
+            </h4>
+            Angie McAngular
+        </li>
+        <li class="list-group-item justify-content-between">
+            <h4 class="list-group-item-heading">Hey, Mongo!
+                <span class="badge badge-info badge-pill pull-xs-right">11:00am</span>
+            </h4>
+            Jay Query
+        </li>
+        <li class="list-group-item justify-content-between list-group-item-success">
+            <h4 class="list-group-item-heading">Lunch
+                <span class="badge badge-info badge-pill pull-xs-right">12:00pm</span>
+            </h4>
+            Free pizza for everyone!
+        </li>
+    </ul><!-- /schedule -->
 
     <!-- callout button -->
     <button type="button"
-            class="btn btn-outline-info btn-lg d-block mx-auto my-3">Don't Miss Out, Register Now
+            class="btn btn-outline-info btn-lg d-block mx-auto my-3"
+            data-toggle="modal"
+            data-target="#register">Don't Miss Out, Register Now
     </button>
 
     <!-- signup form -->
@@ -228,6 +256,31 @@
     <!-- /footer -->
 
 </div> <!-- /.container -->
+
+<!-- ===================================================
+                       FORM MODAL
+     ===================================================
+-->
+
+<div id="register" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Register for FullStack Conf</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Form goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- jQuery first, then bootstrap.js -->
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
